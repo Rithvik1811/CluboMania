@@ -1,0 +1,80 @@
+.cardContainer {
+  --size-times: 1;
+  --coverImgWidth: calc(13.6rem * var(--size-times));
+  --coverImgHeight: calc(6.8rem * var(--size-times));
+  --profileImgDiameter: calc(10.4rem * var(--size-times));
+  --profileImgDistance: calc(1.6rem * var(--size-times));
+
+  display: flex;
+  /* --container-width - defined in CardContainer.module.css */
+  width: var(--container-width);
+  /* height: var(--container-height); */
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.5rem;
+  transition: ease-in 100ms box-shadow, ease-in 100ms transform;
+  border: 0.2rem solid hsl(0, 0%, 80%);
+  /* box-shadow: rgba(134, 134, 134, 0.35) 2px 2px 10px; */
+}
+.cardContainer:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: scale(1.03);
+}
+.images {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.coverImage {
+  border-radius: 0.5rem 0.5rem 0 0;
+  width: inherit;
+  height: 18rem;
+  object-fit: cover;
+  object-position: 50% 50%;
+
+  background-color: #333;
+}
+.semiCircle {
+  position: absolute;
+  width: var(--coverImgWidth);
+  height: var(--coverImgHeight);
+  left: calc(
+    calc(var(--container-width) / 2) - calc((var(--coverImgWidth)) / 2)
+  );
+  bottom: 0;
+
+  background: url("../../../assets/Intersect.svg") no-repeat;
+  background-size: cover;
+}
+.profile {
+  position: absolute;
+  width: var(--profileImgDiameter);
+  height: var(--profileImgDiameter);
+  border-radius: 50%;
+  top: var(--profileImgDistance);
+  left: var(--profileImgDistance);
+
+  object-fit: cover;
+  object-position: 50% 50%;
+
+  background-color: #333;
+}
+.details {
+  --marginTopFactor: 1.2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem 0;
+
+  padding: 2rem;
+  padding-top: 0;
+  margin-top: calc((var(--profileImgDiameter) / 2) * var(--marginTopFactor));
+}
+
+.details > h3,
+.details > p {
+  text-align: center;
+}

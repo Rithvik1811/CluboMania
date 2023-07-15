@@ -1,0 +1,124 @@
+.navbar {
+  --navbar-color: hsl(0, 0%, 14%);
+  /* --nav-link-color: hsl(0, 0%, 20%); */
+  --nav-link-color-hover: hsl(0, 0%, 22%);
+  --nav-font-color: hsl(0, 0%, 96%);
+  --nav-link-active: hsl(200, 100%, 55%);
+  /* This variable is hidden to .empty-space so it can't inherit the properties */
+  /* --nav-height: 5rem; */
+  display: flex;
+  background-color: var(--navbar-color);
+  height: var(--nav-height);
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.brand-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand-nav-container:hover {
+  cursor: pointer;
+}
+.brand-nav-container > div {
+  height: 100%;
+}
+.brand-logo-container {
+  padding: 0 0 0 1rem;
+}
+.brand-logo-container,
+.brand-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand-text-container {
+  margin: 0 0 0 2rem;
+}
+.brand-logo {
+  width: 8rem;
+}
+.brand-text {
+  font-size: 3rem;
+  color: var(--nav-font-color);
+}
+.nav-component {
+  /* background-color: bisque; */
+}
+
+/* Nav List */
+.nav-list {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  font-size: 1.6rem;
+  color: var(--nav-font-color);
+}
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-item.active {
+  color: var(--nav-link-active);
+  box-shadow: inset 0rem -0.3rem var(--nav-link-active);
+}
+.nav-link {
+  height: 100%;
+  padding: 1rem 2rem;
+  color: inherit;
+}
+.nav-link:hover {
+  background-color: var(--nav-link-color-hover);
+}
+.nav-item.active .nav-link:hover {
+  box-shadow: inset 0rem -0.3rem var(--nav-link-active);
+}
+
+.hidden {
+  display: none;
+}
+.profile-wrapper {
+  padding: 0 1rem;
+}
+.profile-wrapper:hover {
+  position: relative;
+  cursor: pointer;
+}
+.round {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  /* background-color: #ddd; */
+}
+.dropdown {
+  position: absolute;
+  width: 15rem;
+  background-color: #f4f4f4;
+  top: 0;
+  right: 0;
+  margin: calc(var(--nav-height) + 1rem) 1rem 0 0;
+  border-radius: 0.5rem;
+  /* padding: 1rem 0; */
+  list-style: none;
+  overflow: hidden;
+}
+.dropdown:hover {
+  cursor: default;
+}
+.action-item {
+  /* background-color: #ddd; */
+  color: black;
+  padding: 1rem;
+}
+.action-item:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+.empty-space {
+  width: 100%;
+  height: var(--nav-height);
+}

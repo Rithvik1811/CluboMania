@@ -1,0 +1,109 @@
+.edit-event-section {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--nav-height));
+  overflow-y: scroll;
+  padding: 3rem;
+  gap: 1.5rem;
+}
+.edit-event-heading {
+  font-size: 3rem;
+}
+.edit-event-form-container {
+  --label-font-size: 1.6rem;
+  --input-field-font-size: var(--label-font-size);
+  --login-btn-font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, max-content);
+  gap: 3rem;
+}
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem 0rem;
+}
+.form-label {
+  display: block;
+  font-size: var(--label-font-size);
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.form-input {
+  font-family: inherit;
+  outline: none;
+  width: 100%;
+  height: 5rem;
+  font-size: var(--input-field-font-size);
+  padding: 1.5rem 1.5rem;
+  border-radius: 0.3rem;
+  border: 0.3rem solid #aaaaaa;
+}
+.form-input::placeholder {
+  opacity: 1;
+  color: #0000009c;
+}
+.form-input:focus {
+  border: 0.3rem solid #222;
+}
+.stretch {
+  grid-area: auto / 1 / span 1 / 3;
+}
+#event_body_group > .form-input {
+  height: 40vh;
+  resize: none;
+}
+#event_body_preview_group > .form-input {
+  height: 10vh;
+  resize: none;
+}
+.actions__form-group {
+  /* background-color: #aaaaaa; */
+  grid-area: auto / 1 / span 1 / 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0 3rem;
+}
+.discard-btn {
+  --action-btn-bg: #757575;
+}
+.save-btn {
+  --action-btn-bg: #00c725;
+}
+.delete-btn {
+  --action-btn-bg: #ff533f;
+}
+.submit-btn {
+  width: 12rem;
+  height: 5rem;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  outline: none;
+
+  background-color: transparent;
+  color: #000000;
+  border: 0.3rem solid var(--action-btn-bg);
+
+  font-family: inherit;
+  font-size: var(--login-btn-font-size);
+  font-weight: 600;
+  text-transform: uppercase;
+
+  transition: background-color 150ms ease-in-out, color 300ms ease-in-out,
+    border 150ms ease-in-out;
+}
+.submit-btn:hover,
+.submit-btn:focus {
+  cursor: pointer;
+  border: none;
+  background-color: var(--action-btn-bg);
+  border: 0.3rem solid var(--action-btn-bg);
+  color: white;
+}

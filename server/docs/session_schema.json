@@ -1,0 +1,14 @@
+{
+  "_id": {
+    "type": "mongoose.SchemaTypes.ObjectId",
+    "required": true
+  },
+  "club_id": {
+    "type": "mongoose.SchemaTypes.ObjectId",
+    "required": true
+  },
+  "expiry": {
+    "type": "mongoose.SchemaTypes.String",
+    "required": true
+  }
+}

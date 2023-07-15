@@ -1,0 +1,52 @@
+/* TODO: Duplicate in cardContainer */
+.loading-heading {
+  /* height: 100vh; */
+  padding-top: 10rem;
+  font-size: 5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  /* background-color: #f64f59; */
+}
+
+.console-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-row-gap: 8rem;
+  justify-items: center;
+  margin: 6rem auto 6rem auto;
+  width: 90rem;
+}
+.item-outer {
+  width: 35rem;
+  background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: transform 100ms ease-in-out;
+}
+.item-outer:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.item-inner {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  gap: 1.5rem;
+  background-color: white;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+.box-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+.box-para {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+}

@@ -1,0 +1,28 @@
+{
+  "_id": {
+    "type": "mongoose.SchemaTypes.ObjectId",
+    "required": true
+  },
+  "club_id": {
+    "type": "mongoose.SchemaTypes.ObjectId",
+    "required": true
+  },
+  "title": {
+    "type": "mongoose.SchemaTypes.String",
+    "required": true,
+    "constraints": { "min": 8, "max": 20 }
+  },
+  "thumbnail_url": {
+    "type": "mongoose.SchemaTypes.String",
+    "required": true
+  },
+  "body_preview": {
+    "type": "mongoose.SchemaTypes.String",
+    "required": true,
+    "constraints": { "min": 10, "max": 25 }
+  },
+  "body": {
+    "type": "mongoose.SchemaTypes.String",
+    "required": true
+  }
+}

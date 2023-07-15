@@ -1,0 +1,119 @@
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+
+  --thumbnail-height: 50rem;
+}
+.header {
+  position: relative;
+  margin: 2rem 0;
+}
+.thumbnail {
+  width: 100%;
+  height: var(--thumbnail-height);
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+.gradient {
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: var(--thumbnail-height);
+  position: absolute;
+  top: 0;
+  background: linear-gradient(0deg, hsla(0, 0%, 0%, 0.9) 10%, transparent);
+  padding: 1.5rem;
+}
+.title {
+  font-size: 4rem;
+  color: white;
+  bottom: 0;
+}
+.content {
+  font-size: 1.6rem;
+}
+.content :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: 3rem;
+}
+.content > h1 {
+  font-size: 4rem;
+}
+.content > h2 {
+  font-size: 3.5rem;
+}
+.content > h3 {
+  font-size: 3rem;
+}
+.content > h4 {
+  font-size: 2.5rem;
+}
+.content p {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  /* background-color: hsl(188, 100%, 75%);
+  color: hsl(293, 100%, 37%); */
+  /* font-weight: 400; */
+}
+.content img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.content * + * {
+  margin-top: 2rem;
+}
+.content :is(h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p) {
+  margin-top: 0.5rem;
+}
+.content :is(p + h1, p + h2, p + h3, p + h4, p + h5, p + h6) {
+  margin-top: 3rem;
+}
+.content ul {
+  list-style-position: inside;
+  font-size: 1.6rem;
+}
+/* h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection {
+  background-color: hsl(186, 100%, 68%);
+} */
+.content blockquote {
+  color: rgba(0, 0, 0, 0.5);
+  padding-left: 1.5rem;
+  border-left: 0.5rem solid rgba(0, 0, 0, 0.1);
+}
+.content table {
+  margin: 3rem auto;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.content td,
+.content th {
+  border-right: 1px solid #dcdcdc;
+  padding: 8px 12px;
+}
+.content td:last-child,
+.content th:last-child {
+  border-right: 0;
+}
+.content td {
+  border-top: 1px solid #dcdcdc;
+}
+.content mark {
+  background-color: #f8f840;
+}
+.content ::selection {
+  background-color: hsl(188, 100%, 75%);
+}
+.content p::selection {
+  color: rgb(0, 54, 99);
+  color: hsl(293, 100%, 34%);
+}

@@ -1,0 +1,32 @@
+.event-list {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem 0;
+  align-items: center;
+  /* height: 100%; */
+  height: calc(100vh - var(--nav-height));
+  width: 30%;
+  padding: 2rem;
+}
+.event-detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem 0;
+  width: 100%;
+  padding: 1.4rem;
+  border: 0.3rem solid #ccc;
+  border-radius: 0.5rem;
+  transition: border 100ms ease, box-shadow 200ms ease;
+}
+.event-detail-container h3 {
+  font-size: 1.6rem;
+}
+.event-detail-container p {
+  font-size: 1.3rem;
+}
+.event-detail-container:hover {
+  border: 0.3rem solid black;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
+  cursor: pointer;
+}

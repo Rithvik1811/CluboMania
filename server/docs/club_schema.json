@@ -1,0 +1,39 @@
+{
+  "_id": {
+    "type": "mongoose.SchemaTypes.ObjectId",
+    "required": true
+  },
+  "username": {
+    "type": "mongoose.SchemaTypes.String",
+    "required": true,
+    "lowercase": true
+  },
+  "password": {
+    "type": "mongoose.SchemaTypes.String",
+    "required": true
+  },
+  "name": {
+    "type": "mongoose.SchemaTypes.String",
+    "required": true
+  },
+  "acronym": {
+    "type": "mongoose.SchemaTypes.String",
+    "required": true
+  },
+  "tagline": {
+    "type": "mongoose.SchemaTypes.String",
+    "required": true
+  },
+  "description": {
+    "type": "mongoose.SchemaTypes.String",
+    "required": true
+  },
+  "cover_photo_url": {
+    "type": "mongoose.SchemaTypes.String",
+    "required": true
+  },
+  "profile_photo_url": {
+    "type": "mongoose.SchemaTypes.String",
+    "required": true
+  }
+}

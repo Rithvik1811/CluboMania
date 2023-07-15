@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+:root {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  --primary-color: #333333;
+  --nav-height: 5rem;
+}
+.no-drag {
+  user-drag: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
